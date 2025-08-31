@@ -1,7 +1,7 @@
 #pragma once
 
 #include "NativeGameplayTags.h"
-#include "Settings/Settings.h"
+#include "Settings/TargetVectorCommonUISettings.h"
 #include "Settings/SessionSettings.h"
 #include "Utility/TVStructs.h"
 #include "Utility/TVSpawningStructs.h"
