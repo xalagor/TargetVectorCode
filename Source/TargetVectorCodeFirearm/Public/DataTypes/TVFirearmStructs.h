@@ -1,7 +1,7 @@
 #pragma once
 
 #include "NativeGameplayTags.h"
-#include "Settings/ALSXTFirearmSettings.h"
+#include "Settings/AlsxtFirearmSettings.h"
 #include "Chaos/ChaosEngineInterface.h"
 #include "Engine/DataAsset.h"
 #include "Engine/EngineTypes.h"

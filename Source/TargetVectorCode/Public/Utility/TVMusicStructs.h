@@ -7,7 +7,7 @@
 #include "AudioMixerBlueprintLibrary.h"
 #include "Sound/QuartzQuantizationUtilities.h"
 #include "Misc/DateTime.h"
-#include "Utility/ALSXTStructs.h"
+#include "Utility/AlsxtStructs.h"
 #include "TVMusicStructs.generated.h"
 
 USTRUCT(BlueprintType)
