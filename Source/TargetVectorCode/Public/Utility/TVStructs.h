@@ -27,9 +27,8 @@ struct TARGETVECTORCODE_API FBreadcrumbEntry
 {
 	GENERATED_BODY()
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
-	UCommonActivatableWidgetStack* Stack{ nullptr };
-
+	        UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	        TObjectPtr<UCommonActivatableWidgetStack> Stack;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
 	TSubclassOf<class UCommonActivatableWidget> WidgetClass;
 
@@ -100,9 +99,8 @@ struct TARGETVECTORCODE_API FPlayerProfilePictureInfo
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
 	float StaticBackgroundImageScale{ 1.0f };
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
-	UTexture* StaticPlayerImage{ nullptr };
-
+	        UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	        TObjectPtr<UTexture> StaticPlayerImage;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
 	FVector StaticPlayerImageTint {FVector(ForceInit)};
 
@@ -184,12 +182,11 @@ struct TARGETVECTORCODE_API FUnitProfilePictureImageLayer
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
 	FString ID;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
-	UTexture2D* StaticImage{ nullptr };
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
-	UTexture2D* DynamicImage{ nullptr };
-
+	        UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	        TObjectPtr<UTexture2D> StaticImage;
+	
+	        UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	        TObjectPtr<UTexture2D> DynamicImage;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
 	FVector2D DynamicImageVeloctiy {FVector2D::ZeroVector};
 
@@ -254,9 +251,8 @@ struct TARGETVECTORCODE_API FPlayerStateEntry
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
 	FString PlayerID;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
-	APlayerState* PlayerState {nullptr};
-};
+	        UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	        TObjectPtr<APlayerState> PlayerState;};
 
 USTRUCT(BlueprintType)
 struct TARGETVECTORCODE_API FUnitInfo
@@ -312,12 +308,11 @@ struct TARGETVECTORCODE_API FUnitProfilePicturePoseLayer
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
 	FString ID;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
-	UTexture2D* PreviewImage{ nullptr };
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
-	UTexture2D* DynamicImage{ nullptr };
-
+	        UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	        TObjectPtr<UTexture2D> PreviewImage;
+	
+	        UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	        TObjectPtr<UTexture2D> DynamicImage;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
 	FVector2D DynamicImageVeloctiy  {FVector2D::ZeroVector};
 
@@ -393,12 +388,11 @@ struct TARGETVECTORCODE_API FPlayEvent
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
 	TArray<FBonus> PlayerBonuses;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
-	UMaterialInterface* Image{ nullptr };
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
-	UMaterialInterface* LargeImage{ nullptr };
-
+	        UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	        TObjectPtr<UMaterialInterface> Image;
+	
+	        UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	        TObjectPtr<UMaterialInterface> LargeImage;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
 	FString SessionSearchString;
 
@@ -533,12 +527,11 @@ struct TARGETVECTORCODE_API FAttack
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
 	FName HitBone;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
-	AActor* HitWeapon{ nullptr };
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
-	AActor* HitAmmo{ nullptr };
-
+	        UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	        TObjectPtr<AActor> HitWeapon;
+	
+	        UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	        TObjectPtr<AActor> HitAmmo;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
 	TSoftObjectPtr<UDamageType> DamageType;
 
@@ -1537,9 +1530,8 @@ struct TARGETVECTORCODE_API FLocationIcon
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
 	TArray<FGameplayTag> ActorTypes;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
-	UTexture2D* Image{ nullptr };
-
+	        UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	        TObjectPtr<UTexture2D> Image;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
 	FLinearColor DefaultColor{ 1.0, 1.0, 1.0, 1.0 };
 };
@@ -1693,15 +1685,14 @@ struct TARGETVECTORCODE_API FIntel
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
 	FText FullText;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
-	UTexture* RenderTarget{ nullptr };
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
-	AActor* Actor{ nullptr };
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
-	AActor* ItemActor{ nullptr };
-
+	        UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	        TObjectPtr<UTexture> RenderTarget;
+	
+	        UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	        TObjectPtr<AActor> Actor;
+	
+	        UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	        TObjectPtr<AActor> ItemActor;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
 	FText SourceName;
 

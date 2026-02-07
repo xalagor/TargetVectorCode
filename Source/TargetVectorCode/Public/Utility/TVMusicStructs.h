@@ -30,9 +30,8 @@ struct TARGETVECTORCODE_API FMusicInfo
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
 	bool StreamerModeFriendly{ true };
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
-	UTexture2D* Artwork{ nullptr };
-
+	        UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
+	        TObjectPtr<UTexture2D> Artwork;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess))
 	float NowPlayingDisplayTime{ 3.0f };
 
